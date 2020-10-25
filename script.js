@@ -17,7 +17,11 @@ function systemConfig(){
 }
 
 function initialize(){
-    if(localStorage.getItem('DateCards') === null) tipChange()
+    if(localStorage.getItem('DateCards') === null){
+        setTimeout(()=>{
+            tipChange()
+        },3000)
+    } 
     if(cards[lastCard()] === undefined){
         if(localStorage.getItem('DateCards') !== null){
             cardStorage('get')
