@@ -103,10 +103,11 @@ function list(){
         card.list.forEach((text, textIndex)=>{
             if(text){
                 let li = document.createElement('li')
-                li.innerHTML = `
-                    <span id="Span-${lastCard()}-${textIndex}">${text}</span>
-                    <input type="text" name="" id="Input-${cardIndex}-${textIndex}">
-                `
+                let span = document.createElement('span')
+                span.id = `Span-${lastCard()}-${textIndex}`
+                span.textContent = text
+                li.appendChild(span)
+                li.innerHTML += `<input type="text" name="" id="Input-${cardIndex}-${textIndex}">`
                 document.querySelector('#Box-'+ cardIndex + ' ul').appendChild(li)
             }
             else{
