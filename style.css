@@ -73,6 +73,35 @@ body {
     transform: scale(1.15);
 }
 
+.slide{
+    display: inline-block;
+    cursor: pointer;
+    background-color: unset;
+    border: 0;
+    font-size: 64px;
+    position: absolute;
+    z-index: 10;
+    color: rgb(90,90,130);
+    transition: color 0.25s;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: 0;
+    display: none;
+}
+
+.slide:hover{
+    color: rgb(130,130,170);
+
+}
+
+.slide.left{
+    left: 16px;
+}
+
+.slide.right{
+    right: 16px;
+}
+
 .container{
     width: 100%;
     height: 100%;
